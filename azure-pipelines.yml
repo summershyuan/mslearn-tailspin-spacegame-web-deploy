@@ -79,10 +79,10 @@ stages:
       runOnce:
         deploy:
           steps:
-          -download: current
+          - download: current
             artifact: drop
-          -task: AzureWebApp@1
-            displayname: 'Azure App Service Deploy: website'
+          - task: AzureWebApp@1
+            displayName: 'Azure App Service Deploy: website'
             inputs:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               appName: '$(WebAppName)'
